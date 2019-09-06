@@ -38,6 +38,8 @@ spec:
           readOnly: true
         - name: fluent-bit-config
           mountPath: /fluent-bit/etc/
+      nodeSelector:
+        kubernetes.io/hostname: pascal0
       terminationGracePeriodSeconds: 10
       volumes:
       - name: varlog
